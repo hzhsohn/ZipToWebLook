@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cB4-kX-5vX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8Bw-h7-cbq">
+            <objects>
+                <navigationController id="cB4-kX-5vX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cvP-Vi-Ql3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1yv-ar-X1l" kind="relationship" relationship="rootViewController" id="PHM-Sf-SLx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAw-YP-7U9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LTA-fB-HhE">
+            <objects>
+                <viewController id="1yv-ar-X1l" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r6x-o9-9bn"/>
+                        <viewControllerLayoutGuide type="bottom" id="BQE-fM-Uc9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sXf-i9-ib0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VOi-Qc-yYh">
+                                <rect key="frame" x="122.5" y="268.5" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="CWF-S1-q2v"/>
+                                    <constraint firstAttribute="width" constant="130" id="mOZ-cY-DjM"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VOi-Qc-yYh" firstAttribute="centerY" secondItem="sXf-i9-ib0" secondAttribute="centerY" id="Wg9-1V-e0X"/>
+                            <constraint firstItem="VOi-Qc-yYh" firstAttribute="centerX" secondItem="sXf-i9-ib0" secondAttribute="centerX" id="g7c-eF-bAI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fUw-R7-7QW"/>
+                    <connections>
+                        <outlet property="indUncompress" destination="VOi-Qc-yYh" id="PhX-Te-4QF"/>
+                        <segue destination="z8P-7e-7Gz" kind="push" identifier="segNext" id="Ej8-zt-9DN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftr-BI-Wii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="135"/>
+        </scene>
+        <!--HTML5-->
+        <scene sceneID="CUO-wA-z5W">
+            <objects>
+                <viewController title="HTML5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z8P-7e-7Gz" customClass="WebBrower" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EMe-81-Wbh"/>
+                        <viewControllerLayoutGuide type="bottom" id="otf-F0-bEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QtQ-Mt-5T5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcg-uh-Qqe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="z8P-7e-7Gz" id="bSf-Qz-5AM"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TX1-hU-lbX">
+                                <rect key="frame" x="123" y="269" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="kIL-30-5pI"/>
+                                    <constraint firstAttribute="width" constant="130" id="p8y-1O-xKY"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWR-9m-CM7">
+                                <rect key="frame" x="67" y="181" width="240" height="305"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJB-58-P5e">
+                                        <rect key="frame" x="27" y="89" width="185" height="126"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Reload Page"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YJB-58-P5e" firstAttribute="top" secondItem="MWR-9m-CM7" secondAttribute="top" constant="89" id="7PF-Qp-Ygd"/>
+                                    <constraint firstItem="YJB-58-P5e" firstAttribute="leading" secondItem="MWR-9m-CM7" secondAttribute="leading" constant="27" id="7z6-H9-TAD"/>
+                                    <constraint firstItem="YJB-58-P5e" firstAttribute="centerX" secondItem="MWR-9m-CM7" secondAttribute="centerX" id="FRs-RB-sQv"/>
+                                    <constraint firstAttribute="width" constant="240" id="H4j-dh-ywP"/>
+                                    <constraint firstAttribute="height" constant="305" id="d0s-a9-7ZJ"/>
+                                    <constraint firstItem="YJB-58-P5e" firstAttribute="centerY" secondItem="MWR-9m-CM7" secondAttribute="centerY" id="dVX-B1-mZ1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1671278571" green="0.1677592416" blue="0.16965339530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mcg-uh-Qqe" firstAttribute="bottom" secondItem="otf-F0-bEA" secondAttribute="top" id="9oC-fu-YeE"/>
+                            <constraint firstItem="MWR-9m-CM7" firstAttribute="centerY" secondItem="QtQ-Mt-5T5" secondAttribute="centerY" id="Bid-ub-ffL"/>
+                            <constraint firstItem="mcg-uh-Qqe" firstAttribute="centerY" secondItem="TX1-hU-lbX" secondAttribute="centerY" constant="-0.5" id="P24-Ht-nz4"/>
+                            <constraint firstAttribute="centerX" secondItem="TX1-hU-lbX" secondAttribute="centerX" id="PXd-nT-Fz6"/>
+                            <constraint firstItem="MWR-9m-CM7" firstAttribute="centerX" secondItem="QtQ-Mt-5T5" secondAttribute="centerX" id="Zxa-uZ-VXp"/>
+                            <constraint firstItem="mcg-uh-Qqe" firstAttribute="leading" secondItem="QtQ-Mt-5T5" secondAttribute="leading" id="fiM-Ih-8qe"/>
+                            <constraint firstItem="mcg-uh-Qqe" firstAttribute="centerX" secondItem="MWR-9m-CM7" secondAttribute="centerX" id="jBc-T4-8mx"/>
+                            <constraint firstAttribute="centerY" secondItem="TX1-hU-lbX" secondAttribute="centerY" id="y23-hS-SXo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="HZC-tg-8za"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BfD-jo-srs"/>
+                    <connections>
+                        <outlet property="indLoading" destination="TX1-hU-lbX" id="dfa-1d-Y9V"/>
+                        <outlet property="viConnectFail" destination="MWR-9m-CM7" id="pWV-Wh-LeH"/>
+                        <outlet property="web" destination="mcg-uh-Qqe" id="ef9-uB-7vq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pab-bD-e2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
